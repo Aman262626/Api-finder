@@ -20,7 +20,7 @@ interface FullMessage {
 }
 
 type Tab = "email" | "inbox" | "apikey";
-type Provider = "mailtm" | "guerrilla";
+type Provider = "mailtm" | "mailgw" | "guerrilla" | "tempmail";
 
 const OWNER_USERNAME = "@bmw_aura1";
 
@@ -375,8 +375,8 @@ export default function Home() {
                   New Temp Email
                 </h2>
                 <p className="text-gray-400 text-sm mb-6">
-                  Naya temporary email generate karo (mail.tm + guerrillamail
-                  fallback)
+                  Generate a new temporary email address using
+                  mail.tm API
                 </p>
                 <button
                   onClick={() => createEmail()}
@@ -700,7 +700,8 @@ export default function Home() {
       <footer className="mt-auto border-t border-white/10 py-6">
         <div className="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
           <p>
-            Owner: {OWNER_USERNAME} | Powered by mail.tm &amp; Google AI Studio
+            Owner: {OWNER_USERNAME} | Powered by mail.tm &amp; Google AI
+            Studio
           </p>
         </div>
       </footer>
